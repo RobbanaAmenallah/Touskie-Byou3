@@ -1,0 +1,146 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Arrière-plan gris clair pour la page */
+    border-radius: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  h3 {
+    font-weight: 900;    
+
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  .cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 15px; /* Espacement entre les articles */
+  }
+  
+  .cart-item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-info {
+    flex-grow: 1;
+  }
+  
+  .cart-item-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .cart-item-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-icon {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-icon:hover {
+    background: #0056b3;
+  }
+  
+  .btn-remove {
+    background: #dc3545;
+  }
+  
+  .btn-remove:hover {
+    background: #c82333;
+  }
+  
+  .cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .btn-clear {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .btn-clear:hover {
+    background: #218838;
+  }
+  
+  /* Nouveau style pour la boîte du panier */
+  .cart-box {
+    background-color: #e0e0e0; /* Boîte grise pour les articles du panier */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Nouveau style pour le bouton de confirmation */
+  .btn-confirm {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .btn-confirm:hover {
+    background: #138496;
+  }
+  
+  .cart-item-image {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+  }
+  

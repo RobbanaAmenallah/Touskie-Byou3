@@ -1,0 +1,22 @@
+.gest-announ-container {
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    min-height: 100vh;
+    padding-top: 70px; /* Si un header fixe est utilisé */
+  }
+  
+  .announcement-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .announcement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+  }
+  

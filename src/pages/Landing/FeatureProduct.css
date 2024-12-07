@@ -1,0 +1,82 @@
+.feature-products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch; /* Ajout pour aligner les cartes verticalement */
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 120%; /* Étendre le conteneur à droite */
+}
+
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; /* Largeur fixe pour homogénéité */
+  display: flex;
+  flex-direction: column; /* S'assurer que le contenu s'aligne en colonne */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Permet d'étirer le contenu pour une hauteur uniforme */
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.product-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1; /* Remplit l'espace restant dans chaque carte */
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  min-height: 40px; /* Fixer une hauteur minimale pour les titres */
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.detail-button {
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.detail-button:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
