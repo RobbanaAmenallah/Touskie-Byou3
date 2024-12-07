@@ -1,6 +1,5 @@
 {
-  "homepage": "http://phyohtetarkar.github.io/react-ecommerce-template/",
-  "name": "react-ecommerce-template",
+  "name": "deployed-build",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
