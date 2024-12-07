@@ -14,12 +14,9 @@ const Cart = () => {
   const fetchCart = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(
-        "https://middleware-dynp.onrender.com/user/cart",
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
-      );
+      const response = await axios.get("http://localhost:4000/user/cart", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
       setCart(response.data.cart || []);
     } catch (error) {
       setErrorMessage(error.response?.data?.message || "Erreur de chargement.");
@@ -40,7 +37,7 @@ const Cart = () => {
     setLoading(true);
     try {
       await axios.patch(
-        "https://middleware-dynp.onrender.com/user/cart/update",
+        "http://localhost:4000/user/cart/update",
         { announcementId, newQuantity },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -60,13 +57,10 @@ const Cart = () => {
   const removeItem = async (announcementId) => {
     setLoading(true);
     try {
-      await axios.delete(
-        "https://middleware-dynp.onrender.com/user/cart/remove",
-        {
-          data: { announcementId },
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
-      );
+      await axios.delete("http://localhost:4000/user/cart/remove", {
+        data: { announcementId },
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
       fetchCart();
     } catch (error) {
       setErrorMessage(
@@ -82,7 +76,7 @@ const Cart = () => {
     setLoading(true);
     try {
       await axios.post(
-        "https://middleware-dynp.onrender.com/user/cart/clear",
+        "http://localhost:4000/user/cart/clear",
         {},
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -103,7 +97,7 @@ const Cart = () => {
     try {
       // Appeler l'API pour effectuer l'achat (création d'une commande)
       await axios.post(
-        "https://middleware-dynp.onrender.com/user/confirm-purchase",
+        "http://localhost:4000/user/confirm-purchase",
         { cart }, // Passer le panier ou une partie des données nécessaires
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

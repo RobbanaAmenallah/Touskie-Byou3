@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "./Footer"; // Importez votre composant Footer
 import Header from "./Header"; // Importez votre composant Header
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Css/GestAnnoun.css"; // Créez un fichier CSS pour styliser ce composant
@@ -23,7 +22,7 @@ function GestAnnoun() {
         }
         // Récupérer les annonces de l'utilisateur connecté
         const response = await axios.get(
-          "https://middleware-dynp.onrender.com/announcement/user/announcements",
+          "http://localhost:4000/announcement/user/announcements",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -47,7 +46,7 @@ function GestAnnoun() {
         throw new Error("Vous devez être connecté pour supprimer une annonce.");
       }
       await axios.delete(
-        `https://middleware-dynp.onrender.com/announcement/${announcementId}`,
+        `http://localhost:4000/announcement/${announcementId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

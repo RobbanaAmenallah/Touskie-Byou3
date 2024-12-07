@@ -1,0 +1,43 @@
+[debug] [2024-12-07T20:11:42.324Z] ----------------------------------------------------------------------
+[debug] [2024-12-07T20:11:42.327Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\robba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-12-07T20:11:42.328Z] CLI Version:   13.28.0
+[debug] [2024-12-07T20:11:42.328Z] Platform:      win32
+[debug] [2024-12-07T20:11:42.328Z] Node Version:  v20.17.0
+[debug] [2024-12-07T20:11:42.328Z] Time:          Sat Dec 07 2024 21:11:42 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2024-12-07T20:11:42.329Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-07T20:11:42.465Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-07T20:11:42.466Z] > authorizing via signed-in user (robbanaamenallah@gmail.com)
+[debug] [2024-12-07T20:11:42.466Z] [iam] checking project marketplace-744b5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-07T20:11:42.468Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:42.469Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:42.470Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-744b5:testIamPermissions [none]
+[debug] [2024-12-07T20:11:42.471Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-744b5:testIamPermissions x-goog-quota-user=projects/marketplace-744b5
+[debug] [2024-12-07T20:11:42.471Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-744b5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-07T20:11:43.115Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-744b5:testIamPermissions 200
+[debug] [2024-12-07T20:11:43.116Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-744b5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-07T20:11:43.117Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:43.117Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:43.117Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-744b5 [none]
+[debug] [2024-12-07T20:11:43.710Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-744b5 200
+[debug] [2024-12-07T20:11:43.710Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-744b5 {"projectId":"marketplace-744b5","projectNumber":"46166125973","displayName":"Marketplace","name":"projects/marketplace-744b5","resources":{"hostingSite":"marketplace-744b5","realtimeDatabaseInstance":"marketplace-744b5-default-rtdb"},"state":"ACTIVE","etag":"1_9d06f221-7e5c-4219-b1ea-eb7eb8f68963"}
+[info] 
+[info] === Deploying to 'marketplace-744b5'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-12-07T20:11:43.723Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:43.723Z] Checked if tokens are valid: true, expires at: 1733605087318
+[debug] [2024-12-07T20:11:43.723Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/marketplace-744b5/versions [none]
+[debug] [2024-12-07T20:11:43.723Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/marketplace-744b5/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-12-07T20:11:46.604Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/marketplace-744b5/versions 200
+[debug] [2024-12-07T20:11:46.604Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/marketplace-744b5/versions {"name":"projects/46166125973/sites/marketplace-744b5/versions/8e11c7038920c916","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[marketplace-744b5]: beginning deploy... 
+[info] i  hosting[marketplace-744b5]: found 73 files in home 
+[debug] [2024-12-07T20:11:46.704Z] [hosting] uploading with 200 concurrency
+[debug] [2024-12-07T20:11:46.707Z] [hosting] hash cache [aG9tZQ] not populated
+[debug] [2024-12-07T20:11:46.806Z] Error: EISDIR: illegal operation on a directory, read
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-12-07T20:11:46.809Z] Error: EISDIR: illegal operation on a directory, read
+[error] 
+[error] Error: An unexpected error has occurred.

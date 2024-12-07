@@ -20,7 +20,7 @@ function RelatedProduct({ category }) {
 
       try {
         const response = await axios.get(
-          `https://middleware-dynp.onrender.com/announcement/filter/category?category=${category}`
+          `http://localhost:4000/announcement/filter/category?category=${category}`
         );
         console.log("Fetched products:", response.data); // Debugging
         if (response.data && Array.isArray(response.data.announcements)) {

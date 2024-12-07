@@ -28,7 +28,7 @@ function UserStatistics() {
         };
 
         const response = await axios.get(
-          "https://middleware-dynp.onrender.com/announcement/user/statistics",
+          "http://localhost:4000/announcement/user/statistics",
           config
         );
         setStats(response.data);

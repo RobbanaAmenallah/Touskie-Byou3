@@ -24,7 +24,7 @@ function ProductDetail() {
       }
 
       const response = await axios.get(
-        `https://middleware-dynp.onrender.com/announcement/${productId}`,
+        `http://localhost:4000/announcement/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -59,7 +59,7 @@ function ProductDetail() {
       }
 
       const response = await axios.post(
-        `https://middleware-dynp.onrender.com/user/cart/add`, // URL de l'API
+        `http://localhost:4000/user/cart/add`, // URL de l'API
         {
           announcementId: productId, // Utiliser productId comme announcementId
           quantity: 1, // Quantité par défaut

@@ -36,7 +36,7 @@ function ProductList() {
     const fetchData = async () => {
       try {
         const productResponse = await axios.get(
-          "https://middleware-dynp.onrender.com/announcement",
+          "http://localhost:4000/announcement",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -52,7 +52,7 @@ function ProductList() {
         );
 
         const categoryResponse = await axios.get(
-          "https://middleware-dynp.onrender.com/category",
+          "http://localhost:4000/category",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

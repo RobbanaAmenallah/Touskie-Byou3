@@ -23,14 +23,11 @@ const CartPayment = () => {
       const email = decoded.email;
 
       // Fetch user data by email
-      const response = await axios.get(
-        `https://middleware-dynp.onrender.com/user/${email}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.get(`http://localhost:4000/user/${email}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       // Extract the cart from the user's data
       const { cart } = response.data.user;
@@ -71,7 +68,7 @@ const CartPayment = () => {
   const handleSendCode = async () => {
     try {
       const response = await axios.post(
-        "https://middleware-dynp.onrender.com/payment/send-code",
+        "http://localhost:4000/payment/send-code",
         {
           contactMethod,
           phoneNumber,
@@ -132,7 +129,7 @@ const CartPayment = () => {
     try {
       // Vérifier le code de confirmation avec le serveur
       const response = await axios.post(
-        "https://middleware-dynp.onrender.com/payment/verify-code",
+        "http://localhost:4000/payment/verify-code",
         paymentData
       );
       console.log(response.data.message);

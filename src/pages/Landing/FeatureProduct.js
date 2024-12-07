@@ -17,7 +17,7 @@ function FeatureProduct() {
       try {
         console.log("Appel API");
         const response = await axios.get(
-          "https://middleware-dynp.onrender.com/announcement/filter/today"
+          "http://localhost:4000/announcement/filter/today"
         );
 
         console.log("Réponse de l'API :", response.data);

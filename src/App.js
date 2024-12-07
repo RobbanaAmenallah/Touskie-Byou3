@@ -13,8 +13,6 @@ import UserStatistics from "./components/UserStatistics";
 import ContactUs from "./components/ContactUs";
 import NotFound from "./components/NotFound";
 import CartPayment from "./components/CartPayment";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
 
 function App() {
   // Vérifie si l'utilisateur est authentifié

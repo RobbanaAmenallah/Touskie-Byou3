@@ -19,16 +19,13 @@ const SignIn = () => {
     if (!isEmailValid || !isPasswordValid) return;
 
     try {
-      const response = await fetch(
-        "https://middleware-dynp.onrender.com/user/signin",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const response = await fetch("http://localhost:4000/user/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
       const data = await response.json();
 

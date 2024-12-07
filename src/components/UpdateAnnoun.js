@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import Footer from "./Footer"; // Import du composant Footer
 import Header from "./Header"; // Import du composant Header
 import "./Css/UpdateAnnoun.css"; // Fichier CSS pour styliser ce composant
 
@@ -33,7 +32,7 @@ function UpdateAnnoun() {
         }
 
         const response = await axios.get(
-          `https://middleware-dynp.onrender.com/announcement/${announcementId}`,
+          `http://localhost:4000/announcement/${announcementId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -89,7 +88,7 @@ function UpdateAnnoun() {
       }
 
       await axios.patch(
-        `https://middleware-dynp.onrender.com/announcement/${announcementId}`,
+        `http://localhost:4000/announcement/${announcementId}`,
         formData,
         {
           headers: {

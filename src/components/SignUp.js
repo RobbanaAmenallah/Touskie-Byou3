@@ -36,22 +36,19 @@ const SignUp = () => {
       return;
 
     try {
-      const response = await fetch(
-        "https://middleware-dynp.onrender.com/user/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstname: firstName,
-            lastname: lastName,
-            email: email,
-            password: password,
-            role: "user",
-          }),
-        }
-      );
+      const response = await fetch("http://localhost:4000/user/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname: firstName,
+          lastname: lastName,
+          email: email,
+          password: password,
+          role: "user",
+        }),
+      });
 
       const data = await response.json();
 

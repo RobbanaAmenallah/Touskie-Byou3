@@ -27,16 +27,13 @@ const ProductForm = () => {
           return;
         }
 
-        const response = await fetch(
-          "https://middleware-dynp.onrender.com/category",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch("http://localhost:4000/category", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         if (response.status === 403) {
           setError("Accès interdit. Vérifiez votre token.");
@@ -142,7 +139,7 @@ const ProductForm = () => {
 
     try {
       const response = await fetch(
-        "https://middleware-dynp.onrender.com/announcement/create",
+        "http://localhost:4000/announcement/create",
         {
           method: "POST",
           headers: {

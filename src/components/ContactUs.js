@@ -36,7 +36,7 @@ const ContactUs = () => {
 
     try {
       const response = await axios.post(
-        "https://middleware-dynp.onrender.com/contactus/create",
+        "http://localhost:4000/contactus/create",
         formData
       );
       setSuccess(response.data.message);
